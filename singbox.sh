@@ -118,8 +118,8 @@ singbox() {
         "padding": false,
         "brutal": {
           "enabled": true,
-          "up_mbps": 500,
-          "down_mbps": 500
+          "up_mbps": 1000,
+          "down_mbps": 1000
         }
       }
     },
@@ -135,8 +135,8 @@ singbox() {
         "padding": false,
         "brutal": {
           "enabled": true,
-          "up_mbps": 500,
-          "down_mbps": 500
+          "up_mbps": 1000,
+          "down_mbps": 1000
         }
       }
     }
