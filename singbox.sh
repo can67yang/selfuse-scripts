@@ -40,6 +40,8 @@ port() {
 singbox() {
     # 安装singbox beta内核
     curl -fsSL https://sing-box.app/install.sh | sh -s -- --beta
+    # 安装tcp brutal
+    bash <(curl -fsSL https://tcp.hy2.sh/)
     # 生成所需参数
     anytlspw=$(openssl rand -base64 16)
     sspw=$(openssl rand -base64 16)
