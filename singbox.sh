@@ -196,7 +196,7 @@ vless-brutal
   "type": "vless",
   "tag": "vless-brutal",
   "server": "${HOST_IP}",
-  "server_port": 443,
+  "server_port": 8443,
   "uuid": "${uuid}",
   "network": "tcp",
   "tls": {
