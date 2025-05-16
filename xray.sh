@@ -180,7 +180,6 @@ EOF
 # 主函数
 main() {
     root
-    port
     xray
 }
 
