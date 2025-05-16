@@ -90,7 +90,7 @@ singbox() {
       "tag": "vless-brutal",
       "type": "vless",
       "listen": "::",
-      "listen_port": 443,
+      "listen_port": 8443,
       "users": [
         {
           "uuid": "${uuid}"
