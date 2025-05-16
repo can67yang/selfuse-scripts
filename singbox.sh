@@ -47,8 +47,8 @@ singbox() {
     X25519Key=$(/usr/bin/sing-box generate reality-keypair)
     shortIds1=$(openssl rand -hex 8)
     shortIds2=$(openssl rand -hex 8)
-    PrivateKey=$(echo "${X25519Key}" | head -1 | awk '{print $3}')
-    PublicKey=$(echo "${X25519Key}" | tail -n 1 | awk '{print $3}')
+    PrivateKey=$(echo "${X25519Key}" | head -1 | awk '{print $2}')
+    PublicKey=$(echo "${X25519Key}" | tail -n 1 | awk '{print $2}')
 
     # 配置config.json
     cat >/etc/sing-box/config.json <<EOF
