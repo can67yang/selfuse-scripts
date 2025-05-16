@@ -41,7 +41,25 @@ xray() {
   },
   "inbounds": [
     {
-      "port": "443",
+      "tag": "dokodemo-in",
+      "port": 443,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "127.0.0.1",
+        "port": 4431,
+        "network": "tcp"
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "tls"
+        ],
+        "routeOnly": true
+      }
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": "4431",
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -110,7 +128,26 @@ xray() {
       "protocol": "blockhole",
       "tag": "block"
     }
-  ]
+  ],
+  "routing": {
+    "rules": [
+      {
+        "inboundTag": [
+          "dokodemo-in"
+        ],
+        "domain": [
+          "www.nvidia.com"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "inboundTag": [
+          "dokodemo-in"
+        ],
+        "outboundTag": "block"
+      }
+    ]
+  }
 }
 EOF
 
